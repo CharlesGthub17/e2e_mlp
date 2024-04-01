@@ -58,7 +58,7 @@ class DataTransformation:
             train_df = pd.read_csv(train_path)
             test_df = pd.read_csv(test_path)
 
-            # Debugging: Print column names of training and testing DataFrames
+            # Print column names of training and testing DataFrames
             print("Training DataFrame columns:", train_df.columns)
             print("Testing DataFrame columns:", test_df.columns)
 
@@ -95,7 +95,7 @@ class DataTransformation:
             return (
                 train_arr,
                 test_arr,
-                self.data_transformation_config.preprocessor_obj_file_path,
+                # self.data_transformation_config.preprocessor_obj_file_path,
             )
 
         except Exception as e:
