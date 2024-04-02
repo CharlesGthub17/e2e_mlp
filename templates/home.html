@@ -1,0 +1,44 @@
+<html>
+<body>
+    <div class="Login">
+       <h1>Mobile Price Prediction</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Data Form</legend>
+        </h1>
+
+        <div class="mb-3">
+            <label class="form-label">Ratings out of 5</label>
+            <input class="form-control" type="number" name="Ratings" step="0.1"
+                placeholder="Enter Your Rating" min='1' max='5' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Total Number of Ratings</label>
+            <input class="form-control" type="number" name="No_of_ratings"
+                placeholder="Enter your no.of ratings" min='1' max='100000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Total Number of Reviews</label>
+            <input class="form-control" type="number" name="No_of_reviews"
+                placeholder="Enter the no.of reviews" min='1' max='30000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Original Price(MRP)</label>
+            <input class="form-control" type="number" name="MRP"
+                placeholder="Enter the Price" min='500' max='140000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Discount in(%)</label>
+            <input class="form-control" type="number" name="Discount"
+                placeholder="Enter the Discount" min='1' max='46' />
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict Selling Price" required />
+        </div>
+    </form>
+    <h2>
+       The Mobile Price Prediction is {{results}}
+    </h2>
+   <body>
+</html>
